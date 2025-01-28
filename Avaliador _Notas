@@ -1,0 +1,26 @@
+# Avaliador-de-Notas
+# Dados iniciais
+nome_alunos_notas = ["Ana:8", "Pedro:7", "Paulo:7", "Camila:8", "Daniel:10", "Glacy:10", "Janaina:7", "Esther:8"]
+
+# Converter lista em um dicionário
+alunos_dict = {item.split(":")[0]: int(item.split(":")[1]) for item in nome_alunos_notas}
+
+# Ordenar por nome
+alunos_ordenados_nome = dict(sorted(alunos_dict.items()))
+
+# Ordenar por nota (maior para menor)
+alunos_ordenados_nota = dict(sorted(alunos_dict.items(), key=lambda x: x[1], reverse=True))
+
+# Calcular média das notas
+media_notas = sum(alunos_dict.values()) / len(alunos_dict)
+
+# Exibir resultados
+print("Alunos ordenados por nome:")
+for nome, nota in alunos_ordenados_nome.items():
+    print(f"{nome}: {nota}")
+
+print("\nAlunos ordenados por nota:")
+for nome, nota in alunos_ordenados_nota.items():
+    print(f"{nome}: {nota}")
+
+print(f"\nMédia das notas da turma: {media_notas:.2f}")
