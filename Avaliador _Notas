@@ -1,7 +1,7 @@
 # Dados iniciais
 nome_alunos_notas = ["Ana:8", "Pedro:7", "Paulo:7", "Camila:8", "Daniel:10", "Glacy:10", "Janaina:7", "Esther:8"]
 
-def converter_para_dicionario(lista)
+def converter_para_dicionario(lista):
     dicionario = {}
     for item in lista:
         try:
