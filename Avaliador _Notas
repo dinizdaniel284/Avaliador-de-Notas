@@ -1,8 +1,7 @@
 # Dados iniciais
 nome_alunos_notas = ["Ana:8", "Pedro:7", "Paulo:7", "Camila:8", "Daniel:10", "Glacy:10", "Janaina:7", "Esther:8"]
 
-def converter_para_dicionario(lista):
-    """Converte uma lista de strings no formato 'nome:nota' para um dicionário."""
+def converter_para_dicionario(lista)
     dicionario = {}
     for item in lista:
         try:
@@ -13,19 +12,15 @@ def converter_para_dicionario(lista):
     return dicionario
 
 def ordenar_por_nome(dicionario):
-    """Ordena o dicionário por nome."""
     return dict(sorted(dicionario.items()))
 
 def ordenar_por_nota(dicionario):
-    """Ordena o dicionário por nota (maior para menor)."""
     return dict(sorted(dicionario.items(), key=lambda x: x[1], reverse=True))
 
 def calcular_media(dicionario):
-    """Calcula a média das notas."""
     return sum(dicionario.values()) / len(dicionario)
 
 def exibir_resultados(dicionario_ordenado_nome, dicionario_ordenado_nota, media):
-    """Exibe os resultados."""
     print("Alunos ordenados por nome:")
     for nome, nota in dicionario_ordenado_nome.items():
         print(f"{nome}: {nota}")
